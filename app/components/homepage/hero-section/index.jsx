@@ -27,13 +27,9 @@ function HeroSection({ name, designation }) {
             This is {' '}
             <span className=" text-pink-500">{name}</span>
             {` , I'm `}
-            <span className="text-white">becoming</span>
-            {` `}
-            <span className="text-[#16f2b3]">a full stack engineer</span>
-            {` `}
-            <span className="text-white">with</span>
-            {` `}
-            <span className="text-[#16f2b3]">magic power of AI</span>
+            <span className=" text-[#16f2b3]">an AI expert</span>
+            {' and '}
+            <span className=" text-[#16f2b3]">a full stack engineer</span>
             .
           </h1>
 
@@ -113,6 +109,10 @@ function HeroSection({ name, designation }) {
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className=" text-white">skills:</span>
                 <span className="text-gray-400">{`['`}</span>
+                <span className="text-amber-300">AI agent</span>
+                <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">AI Work Flow</span>
+                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">TRAE</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MarsCode</span>

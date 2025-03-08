@@ -1,15 +1,55 @@
+import { SiAirplayaudio } from 'react-icons/si';
+import { FaRobot, FaCode, FaPython, FaGitAlt, FaDocker, FaFeather } from 'react-icons/fa';
+import { GiArtificialIntelligence, GiMagicBroom } from 'react-icons/gi';
+import { BsCodeSlash } from 'react-icons/bs';
+import { BiLogoKubernetes } from 'react-icons/bi';
+import { TbMathFunction } from 'react-icons/tb';
+
 export const skillsData = [
-  'AI agent',
-  'AI work flow',
-  'TRAE',
-  'MarsCode',
-  'Prompt Engineering',
-  'Python',
-  'Git',
-  'Kubernet',
-  'Docker',
-  'FeiShu',
-  'Quantization'
+  {
+    name: 'AI agent',
+    icon: FaRobot
+  },
+  {
+    name: 'AI work flow',
+    icon: GiArtificialIntelligence
+  },
+  {
+    name: 'TRAE',
+    icon: SiAirplayaudio
+  },
+  {
+    name: 'MarsCode',
+    icon: BsCodeSlash
+  },
+  {
+    name: 'Prompt Engineering',
+    icon: GiMagicBroom
+  },
+  {
+    name: 'Python',
+    icon: FaPython
+  },
+  {
+    name: 'Git',
+    icon: FaGitAlt
+  },
+  {
+    name: 'Kubernet',
+    icon: BiLogoKubernetes
+  },
+  {
+    name: 'Docker',
+    icon: FaDocker
+  },
+  {
+    name: 'FeiShu',
+    icon: FaFeather
+  },
+  {
+    name: 'Quantization',
+    icon: TbMathFunction
+  }
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

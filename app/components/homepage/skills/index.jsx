@@ -1,11 +1,27 @@
 // @flow strict
 
 import { skillsData } from "@/utils/data/skills";
-import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 function Skills() {
+  const getIconColor = (skillName) => {
+    const colorMap = {
+      'AI agent': 'text-blue-500',
+      'AI work flow': 'text-cyan-500',
+      'TRAE': 'text-indigo-500',
+      'MarsCode': 'text-purple-500',
+      'Prompt Engineering': 'text-teal-500',
+      'Python': 'text-green-500',
+      'Git': 'text-orange-500',
+      'Kubernet': 'text-sky-500',
+      'Docker': 'text-blue-400',
+      'FeiShu': 'text-emerald-500',
+      'Quantization': 'text-rose-500'
+    };
+    return colorMap[skillName] || 'text-white';
+  };
+
   return (
     <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
@@ -47,22 +63,10 @@ function Skills() {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-12 sm:h-14 w-12 sm:w-14 rounded-full bg-gradient-to-br from-violet-500/20 to-pink-500/20 flex items-center justify-center p-2 group-hover:from-violet-500/30 group-hover:to-pink-500/30 transition-all duration-500">
-                    {skillsImage(skill)?.src ? (
-                      <Image
-                        src={skillsImage(skill)?.src}
-                        alt={skill}
-                        width={40}
-                        height={40}
-                        className="h-8 sm:h-10 w-auto transition-all duration-500 group-hover:scale-110"
-                      />
-                    ) : (
-                      <div className="h-8 sm:h-10 w-auto flex items-center justify-center text-white">
-                        {skill.charAt(0).toUpperCase()}
-                      </div>
-                    )}
+                    {skill.icon && <skill.icon size={30} className={`${getIconColor(skill.name)} transition-all duration-500 group-hover:scale-110`} />}
                   </div>
                   <p className="text-white text-sm sm:text-lg font-medium">
-                    {skill}
+                    {skill.name}
                   </p>
                 </div>
               </div>
